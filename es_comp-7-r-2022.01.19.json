@@ -1,5 +1,5 @@
 {
-  "comp-7-s-2022.01.19" : {
+  "comp-7-r-2022.01.19" : {
     "aliases" : { },
     "mappings" : {
       "_doc" : {
@@ -70,6 +70,22 @@
           "day_latest" : {
             "type" : "boolean"
           },
+          "depends" : {
+            "properties" : {
+              "name" : {
+                "type" : "keyword"
+              },
+              "path" : {
+                "type" : "keyword"
+              },
+              "skip_message" : {
+                "type" : "keyword"
+              },
+              "status" : {
+                "type" : "keyword"
+              }
+            }
+          },
           "doc_version" : {
             "type" : "keyword"
           },
@@ -88,6 +104,14 @@
                 "normalizer" : "case_insensitive"
               }
             }
+          },
+          "fqdn" : {
+            "type" : "keyword",
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "ipaddress" : {
+            "type" : "ip"
           },
           "job_uuid" : {
             "type" : "keyword"
@@ -120,6 +144,9 @@
                 "normalizer" : "case_insensitive"
               }
             }
+          },
+          "other_checks" : {
+            "type" : "keyword"
           },
           "platform" : {
             "properties" : {
@@ -193,6 +220,141 @@
           "profiles" : {
             "type" : "nested",
             "properties" : {
+              "controls" : {
+                "type" : "nested",
+                "properties" : {
+                  "id" : {
+                    "type" : "keyword"
+                  },
+                  "impact" : {
+                    "type" : "double"
+                  },
+                  "refs" : {
+                    "type" : "nested",
+                    "properties" : {
+                      "key" : {
+                        "type" : "keyword"
+                      },
+                      "values" : {
+                        "type" : "keyword"
+                      }
+                    }
+                  },
+                  "removed_results_counts" : {
+                    "properties" : {
+                      "failed" : {
+                        "type" : "integer"
+                      },
+                      "passed" : {
+                        "type" : "integer"
+                      },
+                      "skipped" : {
+                        "type" : "integer"
+                      }
+                    }
+                  },
+                  "results" : {
+                    "properties" : {
+                      "code_desc" : {
+                        "type" : "keyword"
+                      },
+                      "message" : {
+                        "type" : "text",
+                        "fields" : {
+                          "keyword" : {
+                            "type" : "keyword",
+                            "ignore_above" : 256
+                          }
+                        }
+                      },
+                      "run_time" : {
+                        "type" : "double"
+                      },
+                      "status" : {
+                        "type" : "keyword"
+                      }
+                    }
+                  },
+                  "status" : {
+                    "type" : "keyword"
+                  },
+                  "string_tags" : {
+                    "type" : "nested",
+                    "properties" : {
+                      "key" : {
+                        "type" : "keyword",
+                        "fields" : {
+                          "engram" : {
+                            "type" : "text",
+                            "analyzer" : "autocomplete"
+                          },
+                          "lower" : {
+                            "type" : "keyword",
+                            "normalizer" : "case_insensitive"
+                          }
+                        }
+                      },
+                      "values" : {
+                        "type" : "keyword",
+                        "fields" : {
+                          "engram" : {
+                            "type" : "text",
+                            "analyzer" : "autocomplete"
+                          },
+                          "lower" : {
+                            "type" : "keyword",
+                            "normalizer" : "case_insensitive"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "tags" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "title" : {
+                    "type" : "keyword",
+                    "fields" : {
+                      "engram" : {
+                        "type" : "text",
+                        "analyzer" : "autocomplete"
+                      },
+                      "lower" : {
+                        "type" : "keyword",
+                        "normalizer" : "case_insensitive"
+                      }
+                    }
+                  },
+                  "waived_str" : {
+                    "type" : "keyword"
+                  },
+                  "waiver_data" : {
+                    "properties" : {
+                      "expiration_date" : {
+                        "type" : "keyword"
+                      },
+                      "justification" : {
+                        "type" : "keyword"
+                      },
+                      "message" : {
+                        "type" : "keyword"
+                      },
+                      "run" : {
+                        "type" : "boolean"
+                      },
+                      "skipped_due_to_waiver" : {
+                        "type" : "boolean"
+                      }
+                    }
+                  }
+                }
+              },
               "controls_sums" : {
                 "properties" : {
                   "failed" : {
@@ -259,7 +421,13 @@
               "sha256" : {
                 "type" : "keyword"
               },
+              "skip_message" : {
+                "type" : "keyword"
+              },
               "status" : {
+                "type" : "keyword"
+              },
+              "status_message" : {
                 "type" : "keyword"
               },
               "title" : {
@@ -312,6 +480,9 @@
               }
             }
           },
+          "run_time_limit" : {
+            "type" : "double"
+          },
           "source_fqdn" : {
             "type" : "keyword",
             "fields" : {
@@ -358,8 +529,8 @@
       "index" : {
         "refresh_interval" : "1s",
         "number_of_shards" : "5",
-        "provided_name" : "comp-7-s-2022.01.19",
-        "creation_date" : "1642602447120",
+        "provided_name" : "comp-7-r-2022.01.19",
+        "creation_date" : "1642602447043",
         "analysis" : {
           "normalizer" : {
             "case_insensitive" : {
@@ -408,7 +579,7 @@
           }
         },
         "number_of_replicas" : "1",
-        "uuid" : "filS1b-KR0SMLg-cvx0J2g",
+        "uuid" : "G8J0r54KSSCkah3kutuHOQ",
         "version" : {
           "created" : "6082299"
         }
