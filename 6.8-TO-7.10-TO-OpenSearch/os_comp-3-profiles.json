@@ -1,0 +1,304 @@
+{
+  "comp-3-profiles" : {
+    "aliases" : { },
+    "mappings" : {
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "attributes" : {
+          "properties" : {
+            "name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "options" : {
+              "properties" : {
+                "default" : {
+                  "type" : "text",
+                  "fields" : {
+                    "keyword" : {
+                      "type" : "keyword",
+                      "ignore_above" : 256
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "controls" : {
+          "type" : "nested",
+          "properties" : {
+            "code" : {
+              "type" : "keyword"
+            },
+            "desc" : {
+              "type" : "keyword"
+            },
+            "description" : {
+              "properties" : {
+                "data" : {
+                  "type" : "keyword"
+                },
+                "label" : {
+                  "type" : "keyword"
+                }
+              }
+            },
+            "id" : {
+              "type" : "keyword",
+              "fields" : {
+                "engram" : {
+                  "type" : "text",
+                  "analyzer" : "autocomplete"
+                },
+                "lower" : {
+                  "type" : "keyword",
+                  "normalizer" : "case_insensitive"
+                }
+              }
+            },
+            "impact" : {
+              "type" : "double"
+            },
+            "refs" : {
+              "type" : "keyword"
+            },
+            "source_location" : {
+              "properties" : {
+                "line" : {
+                  "type" : "integer"
+                },
+                "ref" : {
+                  "type" : "keyword"
+                }
+              }
+            },
+            "tags" : {
+              "type" : "keyword"
+            },
+            "title" : {
+              "type" : "keyword"
+            }
+          }
+        },
+        "copyright" : {
+          "type" : "keyword"
+        },
+        "copyright_email" : {
+          "type" : "keyword"
+        },
+        "depends" : {
+          "properties" : {
+            "git" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "url" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        },
+        "doc_version" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "groups" : {
+          "properties" : {
+            "attributes" : {
+              "properties" : {
+                "name" : {
+                  "type" : "keyword"
+                },
+                "options" : {
+                  "properties" : {
+                    "default" : {
+                      "type" : "keyword"
+                    },
+                    "description" : {
+                      "type" : "keyword"
+                    }
+                  }
+                }
+              }
+            },
+            "controls" : {
+              "type" : "keyword"
+            },
+            "id" : {
+              "type" : "keyword"
+            },
+            "sha256" : {
+              "type" : "keyword"
+            },
+            "title" : {
+              "type" : "keyword"
+            }
+          }
+        },
+        "license" : {
+          "type" : "keyword"
+        },
+        "maintainer" : {
+          "type" : "keyword"
+        },
+        "name" : {
+          "type" : "keyword",
+          "fields" : {
+            "lower" : {
+              "type" : "keyword",
+              "normalizer" : "case_insensitive"
+            }
+          }
+        },
+        "sha256" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "summary" : {
+          "type" : "keyword"
+        },
+        "supports" : {
+          "properties" : {
+            "inspec" : {
+              "type" : "keyword"
+            },
+            "os-family" : {
+              "type" : "keyword"
+            },
+            "os-name" : {
+              "type" : "keyword"
+            },
+            "os_family" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "os_name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "platform" : {
+              "type" : "keyword"
+            },
+            "platform-family" : {
+              "type" : "keyword"
+            },
+            "platform-name" : {
+              "type" : "keyword"
+            },
+            "release" : {
+              "type" : "keyword"
+            }
+          }
+        },
+        "title" : {
+          "type" : "keyword",
+          "fields" : {
+            "engram" : {
+              "type" : "text",
+              "analyzer" : "autocomplete"
+            },
+            "lower" : {
+              "type" : "keyword",
+              "normalizer" : "case_insensitive"
+            }
+          }
+        },
+        "version" : {
+          "type" : "keyword"
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "1s",
+        "number_of_shards" : "5",
+        "provided_name" : "comp-3-profiles",
+        "creation_date" : "1642602073912",
+        "analysis" : {
+          "normalizer" : {
+            "case_insensitive" : {
+              "filter" : [
+                "lowercase",
+                "asciifolding"
+              ],
+              "type" : "custom",
+              "char_filter" : [ ]
+            }
+          },
+          "analyzer" : {
+            "autocomplete" : {
+              "filter" : [
+                "lowercase"
+              ],
+              "tokenizer" : "autocomplete_tokenizer"
+            }
+          },
+          "tokenizer" : {
+            "autocomplete_tokenizer" : {
+              "token_chars" : [
+                "letter",
+                "digit"
+              ],
+              "min_gram" : "2",
+              "type" : "edge_ngram",
+              "max_gram" : "20"
+            }
+          }
+        },
+        "number_of_replicas" : "1",
+        "uuid" : "IiTV3JVUSceEin0jS_ZCqQ",
+        "version" : {
+          "created" : "6082299",
+          "upgraded" : "135238127"
+        }
+      }
+    }
+  }
+}

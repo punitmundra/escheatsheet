@@ -1,0 +1,112 @@
+{
+  "node-attribute" : {
+    "aliases" : { },
+    "mappings" : {
+      "properties" : {
+        "all_value_count" : {
+          "type" : "long"
+        },
+        "automatic" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "automatic_value_count" : {
+          "type" : "long"
+        },
+        "chef_environment" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "default" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "default_value_count" : {
+          "type" : "long"
+        },
+        "entity_uuid" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "last_update" : {
+          "type" : "date"
+        },
+        "name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "normal" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "normal_value_count" : {
+          "type" : "long"
+        },
+        "override" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "override_value_count" : {
+          "type" : "long"
+        },
+        "run_list" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "creation_date" : "1642514088605",
+        "number_of_shards" : "5",
+        "number_of_replicas" : "1",
+        "uuid" : "066tWwc1TleGgIeMJtah6A",
+        "version" : {
+          "created" : "6082299",
+          "upgraded" : "135238127"
+        },
+        "provided_name" : "node-attribute"
+      }
+    }
+  }
+}

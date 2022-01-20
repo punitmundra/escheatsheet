@@ -1,0 +1,37 @@
+{
+  "node-1-run-info" : {
+    "aliases" : { },
+    "mappings" : {
+      "properties" : {
+        "first_run" : {
+          "type" : "date"
+        },
+        "last_run" : {
+          "type" : "date"
+        },
+        "node_uuid" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "creation_date" : "1642514088524",
+        "number_of_shards" : "5",
+        "number_of_replicas" : "1",
+        "uuid" : "ySYllsvKQVG_cb7HcMcBPA",
+        "version" : {
+          "created" : "6082299",
+          "upgraded" : "135238127"
+        },
+        "provided_name" : "node-1-run-info"
+      }
+    }
+  }
+}

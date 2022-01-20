@@ -1,0 +1,31 @@
+{
+  "comp-1-run-info" : {
+    "aliases" : { },
+    "mappings" : {
+      "properties" : {
+        "first_run" : {
+          "type" : "date"
+        },
+        "last_run" : {
+          "type" : "date"
+        },
+        "node_uuid" : {
+          "type" : "keyword"
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "1s",
+        "number_of_shards" : "5",
+        "provided_name" : "comp-1-run-info",
+        "creation_date" : "1642602074185",
+        "number_of_replicas" : "1",
+        "uuid" : "JhXOJYPqRiWGikjKtw0UmA",
+        "version" : {
+          "created" : "6082299"
+        }
+      }
+    }
+  }
+}
