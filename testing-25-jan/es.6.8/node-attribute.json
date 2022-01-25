@@ -1,0 +1,74 @@
+{
+  "node-attribute" : {
+    "aliases" : { },
+    "mappings" : {
+      "node-attribute" : {
+        "dynamic" : "true",
+        "properties" : {
+          "all_value_count" : {
+            "type" : "long"
+          },
+          "automatic" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "automatic_value_count" : {
+            "type" : "long"
+          },
+          "chef_environment" : {
+            "type" : "text"
+          },
+          "default" : {
+            "type" : "text"
+          },
+          "default_value_count" : {
+            "type" : "long"
+          },
+          "entity_uuid" : {
+            "type" : "keyword"
+          },
+          "last_update" : {
+            "type" : "date"
+          },
+          "name" : {
+            "type" : "text"
+          },
+          "normal" : {
+            "type" : "text"
+          },
+          "normal_value_count" : {
+            "type" : "long"
+          },
+          "override" : {
+            "type" : "text"
+          },
+          "override_value_count" : {
+            "type" : "long"
+          },
+          "run_list" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "5s",
+        "number_of_shards" : "5",
+        "provided_name" : "node-attribute",
+        "creation_date" : "1642788376632",
+        "number_of_replicas" : "1",
+        "uuid" : "uBTrYPdEQXCXyFJgQ5SULA",
+        "version" : {
+          "created" : "6082299"
+        }
+      }
+    }
+  }
+}

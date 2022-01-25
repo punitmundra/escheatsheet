@@ -1,0 +1,180 @@
+{
+  "eventfeed-2-feeds" : {
+    "aliases" : { },
+    "mappings" : {
+      "dynamic" : "false",
+      "properties" : {
+        "actor_id" : {
+          "type" : "text"
+        },
+        "actor_name" : {
+          "type" : "keyword",
+          "fields" : {
+            "engram" : {
+              "type" : "text",
+              "analyzer" : "autocomplete"
+            },
+            "lower" : {
+              "type" : "keyword",
+              "normalizer" : "case_insensitive"
+            }
+          }
+        },
+        "actor_object_type" : {
+          "type" : "text"
+        },
+        "chef_infra_server" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "chef_organization" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "created" : {
+          "type" : "date"
+        },
+        "entity_uuid" : {
+          "type" : "keyword"
+        },
+        "event_type" : {
+          "type" : "keyword",
+          "fields" : {
+            "engram" : {
+              "type" : "text",
+              "analyzer" : "autocomplete"
+            },
+            "lower" : {
+              "type" : "keyword",
+              "normalizer" : "case_insensitive"
+            }
+          }
+        },
+        "feed_type" : {
+          "type" : "text"
+        },
+        "object_id" : {
+          "type" : "text"
+        },
+        "object_name" : {
+          "type" : "text"
+        },
+        "object_object_type" : {
+          "type" : "keyword",
+          "fields" : {
+            "engram" : {
+              "type" : "text",
+              "analyzer" : "autocomplete"
+            },
+            "lower" : {
+              "type" : "keyword",
+              "normalizer" : "case_insensitive"
+            }
+          }
+        },
+        "parent_name" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "parent_type" : {
+          "type" : "keyword",
+          "ignore_above" : 256
+        },
+        "producer_id" : {
+          "type" : "keyword"
+        },
+        "producer_name" : {
+          "type" : "text"
+        },
+        "producer_object_type" : {
+          "type" : "text"
+        },
+        "producer_tags" : {
+          "type" : "keyword"
+        },
+        "projects" : {
+          "type" : "keyword"
+        },
+        "pub_timestamp" : {
+          "type" : "date"
+        },
+        "tags" : {
+          "type" : "keyword",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "target_id" : {
+          "type" : "text"
+        },
+        "target_name" : {
+          "type" : "text"
+        },
+        "target_object_type" : {
+          "type" : "text"
+        },
+        "verb" : {
+          "type" : "keyword",
+          "fields" : {
+            "engram" : {
+              "type" : "text",
+              "analyzer" : "autocomplete"
+            },
+            "lower" : {
+              "type" : "keyword",
+              "normalizer" : "case_insensitive"
+            }
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "1s",
+        "number_of_shards" : "5",
+        "provided_name" : "eventfeed-2-feeds",
+        "creation_date" : "1642788372970",
+        "analysis" : {
+          "normalizer" : {
+            "case_insensitive" : {
+              "filter" : [
+                "lowercase",
+                "asciifolding"
+              ],
+              "type" : "custom",
+              "char_filter" : [ ]
+            }
+          },
+          "analyzer" : {
+            "autocomplete" : {
+              "filter" : [
+                "lowercase"
+              ],
+              "tokenizer" : "autocomplete_tokenizer"
+            }
+          },
+          "tokenizer" : {
+            "autocomplete_tokenizer" : {
+              "token_chars" : [
+                "letter",
+                "digit"
+              ],
+              "min_gram" : "2",
+              "type" : "edge_ngram",
+              "max_gram" : "20"
+            }
+          }
+        },
+        "number_of_replicas" : "1",
+        "uuid" : "KKdycDHQTiiAdzHtBtO-gA",
+        "version" : {
+          "created" : "6082299",
+          "upgraded" : "135238127"
+        }
+      }
+    }
+  }
+}

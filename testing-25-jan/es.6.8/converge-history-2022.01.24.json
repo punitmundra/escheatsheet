@@ -1,0 +1,388 @@
+{
+  "converge-history-2022.01.24" : {
+    "aliases" : { },
+    "mappings" : {
+      "converge" : {
+        "dynamic" : "false",
+        "properties" : {
+          "chef_tags" : {
+            "type" : "keyword"
+          },
+          "chef_version" : {
+            "type" : "keyword"
+          },
+          "cloud_provider" : {
+            "type" : "keyword"
+          },
+          "cookbooks" : {
+            "type" : "keyword"
+          },
+          "deprecations" : {
+            "dynamic" : "true",
+            "properties" : {
+              "location" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "message" : {
+                "type" : "text",
+                "norms" : false
+              },
+              "url" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              }
+            }
+          },
+          "dmi_system_manufacturer" : {
+            "type" : "keyword"
+          },
+          "dmi_system_serial_number" : {
+            "type" : "keyword"
+          },
+          "domain" : {
+            "type" : "keyword"
+          },
+          "ec2" : {
+            "properties" : {
+              "account_id" : {
+                "type" : "keyword"
+              },
+              "instance_id" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "instance_type" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "placement_availability_zone" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "public_ipv4" : {
+                "type" : "ip"
+              },
+              "region" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "end_time" : {
+            "type" : "date"
+          },
+          "entity_uuid" : {
+            "type" : "keyword"
+          },
+          "environment" : {
+            "type" : "keyword"
+          },
+          "error" : {
+            "properties" : {
+              "backtrace" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "class" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "description" : {
+                "dynamic" : "true",
+                "properties" : {
+                  "title" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  }
+                }
+              },
+              "message" : {
+                "type" : "text",
+                "norms" : false
+              }
+            }
+          },
+          "event_action" : {
+            "type" : "keyword"
+          },
+          "expanded_run_list" : {
+            "properties" : {
+              "id" : {
+                "type" : "keyword"
+              },
+              "run_list" : {
+                "properties" : {
+                  "name" : {
+                    "type" : "keyword",
+                    "index" : false,
+                    "doc_values" : false
+                  },
+                  "skipped" : {
+                    "type" : "boolean"
+                  },
+                  "type" : {
+                    "type" : "keyword",
+                    "index" : false,
+                    "doc_values" : false,
+                    "ignore_above" : 256
+                  }
+                }
+              }
+            }
+          },
+          "fqdn" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "hostname" : {
+            "type" : "keyword"
+          },
+          "ip6address" : {
+            "type" : "ip"
+          },
+          "ipaddress" : {
+            "type" : "ip"
+          },
+          "kernel_release" : {
+            "type" : "keyword"
+          },
+          "kernel_version" : {
+            "type" : "keyword"
+          },
+          "macaddress" : {
+            "type" : "keyword"
+          },
+          "memory_total" : {
+            "type" : "keyword"
+          },
+          "node_name" : {
+            "type" : "keyword"
+          },
+          "organization_name" : {
+            "type" : "keyword"
+          },
+          "platform" : {
+            "type" : "keyword"
+          },
+          "platform_family" : {
+            "type" : "keyword"
+          },
+          "platform_version" : {
+            "type" : "keyword"
+          },
+          "policy_group" : {
+            "type" : "keyword"
+          },
+          "policy_name" : {
+            "type" : "keyword"
+          },
+          "policy_revision" : {
+            "type" : "keyword"
+          },
+          "recipes" : {
+            "type" : "keyword"
+          },
+          "resource_names" : {
+            "type" : "keyword"
+          },
+          "resources" : {
+            "dynamic" : "true",
+            "properties" : {
+              "conditional" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "cookbook_name" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "cookbook_type" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "cookbook_version" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              },
+              "delta" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "duration" : {
+                "type" : "integer"
+              },
+              "error" : {
+                "properties" : {
+                  "class" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  },
+                  "description" : {
+                    "properties" : {
+                      "title" : {
+                        "type" : "text",
+                        "fields" : {
+                          "keyword" : {
+                            "type" : "keyword",
+                            "ignore_above" : 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "message" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  }
+                }
+              },
+              "id" : {
+                "type" : "keyword"
+              },
+              "ignore_failure" : {
+                "type" : "boolean"
+              },
+              "name" : {
+                "type" : "keyword"
+              },
+              "recipe_name" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "result" : {
+                "type" : "keyword"
+              },
+              "status" : {
+                "type" : "keyword"
+              },
+              "type" : {
+                "type" : "text",
+                "fields" : {
+                  "keyword" : {
+                    "type" : "keyword",
+                    "ignore_above" : 256
+                  }
+                }
+              }
+            }
+          },
+          "roles" : {
+            "type" : "keyword"
+          },
+          "run_id" : {
+            "type" : "keyword"
+          },
+          "run_list" : {
+            "type" : "keyword"
+          },
+          "source" : {
+            "type" : "keyword"
+          },
+          "source_fqdn" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "start_time" : {
+            "type" : "date"
+          },
+          "status" : {
+            "type" : "keyword"
+          },
+          "tags" : {
+            "type" : "keyword"
+          },
+          "timestamp" : {
+            "type" : "date"
+          },
+          "timezone" : {
+            "type" : "keyword"
+          },
+          "total_resource_count" : {
+            "type" : "integer"
+          },
+          "updated_resource_count" : {
+            "type" : "integer"
+          },
+          "uptime_seconds" : {
+            "type" : "long"
+          },
+          "versioned_cookbooks" : {
+            "type" : "nested",
+            "properties" : {
+              "name" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              },
+              "version" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "virtualization_role" : {
+            "type" : "keyword"
+          },
+          "virtualization_system" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "5s",
+        "number_of_shards" : "5",
+        "provided_name" : "converge-history-2022.01.24",
+        "creation_date" : "1643016447612",
+        "number_of_replicas" : "1",
+        "uuid" : "dhBpfgn3RJ6yBkVxM86i8g",
+        "version" : {
+          "created" : "6082299"
+        }
+      }
+    }
+  }
+}

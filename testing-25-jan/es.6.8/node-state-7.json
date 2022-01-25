@@ -1,0 +1,642 @@
+{
+  "node-state-7" : {
+    "aliases" : {
+      "node-state" : { }
+    },
+    "mappings" : {
+      "node-state" : {
+        "dynamic" : "false",
+        "properties" : {
+          "attributes" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "checkin" : {
+            "type" : "date"
+          },
+          "chef_run_status" : {
+            "type" : "keyword"
+          },
+          "chef_tags" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "chef_version" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "cloud_account_id" : {
+            "type" : "keyword"
+          },
+          "cloud_id" : {
+            "type" : "keyword"
+          },
+          "cloud_provider" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "cloud_region" : {
+            "type" : "keyword"
+          },
+          "cookbooks" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "created" : {
+            "type" : "date"
+          },
+          "deprecations" : {
+            "dynamic" : "true",
+            "properties" : {
+              "location" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "message" : {
+                "type" : "text",
+                "norms" : false
+              },
+              "url" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              }
+            }
+          },
+          "deprecations_count" : {
+            "type" : "integer",
+            "null_value" : 0
+          },
+          "dmi_system_manufacturer" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "dmi_system_serial_number" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "domain" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "ec2" : {
+            "properties" : {
+              "account_id" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "instance_id" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "instance_type" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "placement_availability_zone" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false,
+                "ignore_above" : 256
+              },
+              "public_ipv4" : {
+                "type" : "ip"
+              },
+              "region" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              }
+            }
+          },
+          "entity_uuid" : {
+            "type" : "keyword"
+          },
+          "environment" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "error" : {
+            "properties" : {
+              "backtrace" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "class" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "description" : {
+                "dynamic" : "true",
+                "properties" : {
+                  "title" : {
+                    "type" : "text",
+                    "fields" : {
+                      "keyword" : {
+                        "type" : "keyword",
+                        "ignore_above" : 256
+                      }
+                    }
+                  }
+                }
+              },
+              "message" : {
+                "type" : "text",
+                "norms" : false
+              }
+            }
+          },
+          "error_message" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "error_type" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "exists" : {
+            "type" : "boolean",
+            "null_value" : false
+          },
+          "expanded_run_list" : {
+            "properties" : {
+              "id" : {
+                "type" : "keyword",
+                "index" : false,
+                "doc_values" : false
+              },
+              "run_list" : {
+                "properties" : {
+                  "name" : {
+                    "type" : "keyword",
+                    "index" : false,
+                    "doc_values" : false
+                  },
+                  "skipped" : {
+                    "type" : "boolean"
+                  },
+                  "type" : {
+                    "type" : "keyword",
+                    "index" : false,
+                    "doc_values" : false,
+                    "ignore_above" : 256
+                  }
+                }
+              }
+            }
+          },
+          "fqdn" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "has_deprecations" : {
+            "type" : "boolean",
+            "null_value" : false
+          },
+          "hostname" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "ip6address" : {
+            "type" : "ip"
+          },
+          "ipaddress" : {
+            "type" : "ip"
+          },
+          "kernel_release" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "kernel_version" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "last_ccr_received" : {
+            "type" : "date"
+          },
+          "latest_run_id" : {
+            "type" : "keyword"
+          },
+          "liveness_managed" : {
+            "type" : "boolean",
+            "null_value" : false
+          },
+          "macaddress" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "memory_total" : {
+            "type" : "keyword"
+          },
+          "node_name" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "organization_name" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "platform" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "platform_family" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "platform_version" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "policy_group" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "policy_name" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "policy_revision" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "projects" : {
+            "type" : "keyword"
+          },
+          "recipes" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "resource_names" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "roles" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "run_list" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false
+          },
+          "source_fqdn" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "status" : {
+            "type" : "keyword"
+          },
+          "tags" : {
+            "type" : "keyword",
+            "index" : false,
+            "doc_values" : false,
+            "ignore_above" : 256
+          },
+          "timestamp" : {
+            "type" : "date"
+          },
+          "timezone" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "uptime_seconds" : {
+            "type" : "long"
+          },
+          "versioned_cookbooks" : {
+            "type" : "nested",
+            "properties" : {
+              "name" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              },
+              "version" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "virtualization_role" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          },
+          "virtualization_system" : {
+            "type" : "keyword",
+            "fields" : {
+              "engram" : {
+                "type" : "text",
+                "analyzer" : "autocomplete"
+              },
+              "lower" : {
+                "type" : "keyword",
+                "normalizer" : "case_insensitive"
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "refresh_interval" : "5s",
+        "number_of_shards" : "5",
+        "provided_name" : "node-state-7",
+        "creation_date" : "1642788376272",
+        "analysis" : {
+          "normalizer" : {
+            "case_insensitive" : {
+              "filter" : [
+                "lowercase",
+                "asciifolding"
+              ],
+              "type" : "custom",
+              "char_filter" : [ ]
+            }
+          },
+          "analyzer" : {
+            "autocomplete" : {
+              "filter" : [
+                "lowercase"
+              ],
+              "tokenizer" : "autocomplete_tokenizer"
+            }
+          },
+          "tokenizer" : {
+            "autocomplete_tokenizer" : {
+              "token_chars" : [
+                "letter",
+                "digit",
+                "punctuation"
+              ],
+              "min_gram" : "2",
+              "type" : "edge_ngram",
+              "max_gram" : "20"
+            }
+          }
+        },
+        "number_of_replicas" : "1",
+        "uuid" : "s0yQccQkQWiYan8R4d3Ogw",
+        "version" : {
+          "created" : "6082299"
+        }
+      }
+    }
+  }
+}
