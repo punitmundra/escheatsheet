@@ -1,0 +1,343 @@
+{
+  "comp-7-s-2022.01.29" : {
+    "aliases" : { },
+    "mappings" : {
+      "properties" : {
+        "@timestamp" : {
+          "type" : "date"
+        },
+        "controls_sums" : {
+          "properties" : {
+            "failed" : {
+              "properties" : {
+                "critical" : {
+                  "type" : "long"
+                },
+                "major" : {
+                  "type" : "long"
+                },
+                "minor" : {
+                  "type" : "long"
+                },
+                "total" : {
+                  "type" : "long"
+                }
+              }
+            },
+            "passed" : {
+              "properties" : {
+                "total" : {
+                  "type" : "long"
+                }
+              }
+            },
+            "skipped" : {
+              "properties" : {
+                "total" : {
+                  "type" : "long"
+                }
+              }
+            },
+            "total" : {
+              "type" : "long"
+            },
+            "waived" : {
+              "properties" : {
+                "total" : {
+                  "type" : "long"
+                }
+              }
+            }
+          }
+        },
+        "daily_latest" : {
+          "type" : "boolean"
+        },
+        "day_latest" : {
+          "type" : "boolean"
+        },
+        "doc_version" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "end_time" : {
+          "type" : "date"
+        },
+        "environment" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "job_uuid" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "node_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "node_uuid" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "organization_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "platform" : {
+          "properties" : {
+            "full" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "release" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        },
+        "policy_group" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "policy_name" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "profiles" : {
+          "properties" : {
+            "controls_sums" : {
+              "properties" : {
+                "failed" : {
+                  "properties" : {
+                    "critical" : {
+                      "type" : "long"
+                    },
+                    "major" : {
+                      "type" : "long"
+                    },
+                    "minor" : {
+                      "type" : "long"
+                    },
+                    "total" : {
+                      "type" : "long"
+                    }
+                  }
+                },
+                "passed" : {
+                  "properties" : {
+                    "total" : {
+                      "type" : "long"
+                    }
+                  }
+                },
+                "skipped" : {
+                  "properties" : {
+                    "total" : {
+                      "type" : "long"
+                    }
+                  }
+                },
+                "total" : {
+                  "type" : "long"
+                },
+                "waived" : {
+                  "properties" : {
+                    "total" : {
+                      "type" : "long"
+                    }
+                  }
+                }
+              }
+            },
+            "full" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "name" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "profile" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "sha256" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "status" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "title" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            },
+            "version" : {
+              "type" : "text",
+              "fields" : {
+                "keyword" : {
+                  "type" : "keyword",
+                  "ignore_above" : 256
+                }
+              }
+            }
+          }
+        },
+        "report_uuid" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "source_fqdn" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "statistics" : {
+          "properties" : {
+            "duration" : {
+              "type" : "float"
+            }
+          }
+        },
+        "status" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "status_message" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "version" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "creation_date" : "1643449562180",
+        "number_of_shards" : "1",
+        "number_of_replicas" : "1",
+        "uuid" : "T9SJNih1TsOpClNuaKvBmQ",
+        "version" : {
+          "created" : "135238127"
+        },
+        "provided_name" : "comp-7-s-2022.01.29"
+      }
+    }
+  }
+}
